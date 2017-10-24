@@ -1,0 +1,32 @@
+@import './node_modules/bootstrap/scss/bootstrap.scss';
+
+ul {
+    margin-left: 20em;
+}
+
+a{
+    padding-right: .5rem;
+    padding-left: .5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+#mynav{
+    padding: 0px;
+    margin: 0px;
+    
+}
+#siteKeyword{
+    color:#FFC400;
+}
+#barButton{
+   color: #FFC400;
+   background-color: #000000;
+   border-color: #FC8F00;
+   
+  
+}
+.bg-dark[_ngcontent-c1] {
+    background-color: #1a1a1a !important;
+}
