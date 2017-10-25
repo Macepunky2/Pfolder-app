@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import { User } from '../../user';
 
 @Component({
   selector: 'app-register',
@@ -16,18 +17,18 @@ export class RegisterComponent implements OnInit {
   users: User[];
 
 
-  onSubmit(name,email,pass,passConfirm)
+  onSubmit(username,email,pass,passConfirm)
   { 
     let valid = true;
 
-    if(!name)
+    if(!username)
     {
       valid = false;
       alert('Missing name');
-      console.log('missing name');
 
-    }else if(name){
-      console.log(name);
+
+    }else if(username){
+      console.log(username);
     }
 
 
@@ -35,7 +36,7 @@ export class RegisterComponent implements OnInit {
     {
       valid = false;
       alert('Missing email');
-      console.log('missing email');
+
 
     }else if(email){
       console.log(email);
@@ -45,7 +46,6 @@ export class RegisterComponent implements OnInit {
     if(pass != passConfirm || !pass || !passConfirm)
     { 
       alert('Password not match');
-      console.log ('pass not match');
       return false;
 
     }else if(this.pass === this.passConfirm){
@@ -53,8 +53,21 @@ export class RegisterComponent implements OnInit {
     }
 
     if(valid == true)
+
     {
       alert('Register successful!');
+
+      
+      this.users.push
+      ({
+          username: username,
+          email: email,
+          password: pass
+      });
+
+      return false;
+
+      
 
      
     }
@@ -66,21 +79,15 @@ export class RegisterComponent implements OnInit {
 
 
   constructor(private dataService:DataService) { 
-    this.dataService.getUsers().subscribe((users) => {
-     this.users = users;
-    });
+
   }
 
   
 
   ngOnInit() {
+    this.dataService.getUsers().subscribe((users) => {
+      this.users = users;
+     });
   }
 
-}
-
-interface User{
-  username:string;
-  password:string;
-  email:string;
-  
 }

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { User } from '../user';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -11,10 +13,11 @@ export class DataService {
   }
 
 
-  getUsers()
+  getUsers() : Observable<any> 
   {
     return this.http.get('/json/users.json')
     .map(res => res.json());
   }
 
 }
+
