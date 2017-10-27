@@ -13,11 +13,12 @@ export class DataService {
   }
 
 
-  getUsers() : Observable<any> 
+  getUsers() : Observable<User[]> 
   {
     return this.http.get('/json/users.json')
     .map(res => res.json());
   }
+ 
 
 }
 

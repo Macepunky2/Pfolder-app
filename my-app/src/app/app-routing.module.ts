@@ -8,6 +8,8 @@ import { DrawComponent } from './components/draw/draw.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { PhotoListComponent } from './photo-list/photo-list.component';
+import { Photo1Component } from './photo1/photo1.component';
 
 
 const routes: Routes = [
@@ -18,7 +20,9 @@ const routes: Routes = [
   { path: 'Draw', component: DrawComponent},
   { path: 'Login', component: LoginComponent},
   { path: 'Register' ,component: RegisterComponent},
-  { path: 'Profile', component: ProfileComponent}
+  { path: 'Profile', component: ProfileComponent},
+  { path: 'photos' ,component: PhotoListComponent },
+  { path: 'photo/:id' ,component: Photo1Component }
  
 ];
 

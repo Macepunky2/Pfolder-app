@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import { NgModel } from '@angular/forms'
 import { User } from '../../user'
 
 @Component({
@@ -11,11 +12,25 @@ import { User } from '../../user'
 
 export class ProfileComponent implements OnInit {
 
-  users: User[];
+  users : User[];
+  username: string;
+  name: string;
+  email:string;
 
-  constructor() { }
+
+  constructor(private dataService:DataService) { 
+  }
 
   ngOnInit() {
+
+    this.dataService.getUsers().subscribe((users) => {
+      this.users = users;
+    console.log(this.users[0]);
+    this.username = this.users[0].username;  
+ 
+  });
+
+
   }
 
 }

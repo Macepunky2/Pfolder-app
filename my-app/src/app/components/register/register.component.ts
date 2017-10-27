@@ -13,6 +13,8 @@ export class RegisterComponent implements OnInit {
   email:string;
   pass:string;
   passConfirm:string;
+  website:string;
+  phone: string;
 
   users: User[];
 
@@ -60,14 +62,15 @@ export class RegisterComponent implements OnInit {
       
       this.users.push
       ({
+          name: username,
           username: username,
           email: email,
-          password: pass
+          password: pass,
+          website: username,
+          phone: username
       });
 
-      return false;
-
-      
+      return false;     
 
      
     }

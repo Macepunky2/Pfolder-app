@@ -1,0 +1,47 @@
+<div class="album text-muted">
+        <div class="container" id="artcontainer">
+          <div class="row">
+              <div class="col"></div>
+              <div class="col-6">          
+        <div class="card-deck">
+          <div  *ngFor="let photo of photos | slice:0:20">
+               
+             <div class="card">        
+            
+              
+                    <a [routerLink]="['/photo', photo.id]" id="nodeco"> <img class="card-img-top" src="{{photo.thumbnailUrl}}" alt="Card image cap">
+                    </a>
+
+            <div class="card-body">
+              <h4 class="card-title">Submission {{photo.id}}</h4>
+              <p>"{{photo.title}}"</p>
+              <hr>
+              <p>brief author comments</p>
+              <hr>
+              <div>
+                  
+               <span class="badge badge-pill badge-dark">#{{users.email}}</span>
+               <span class="badge badge-pill badge-dark">#crap</span>
+               <span class="badge badge-pill badge-dark">#stuff</span>
+               <span class="badge badge-pill badge-dark">#idontcare</span>
+     
+             </div>
+            </div>
+           
+          
+  
+            <div class="card-footer">
+              
+              <small class="text-muted">Last updated 1 mins ago</small>
+            </div>
+        </div>
+    
+        </div>
+          </div>
+        </div> 
+          <div class="col">
+                
+       </div>
+    </div>
+</div>
+</div>

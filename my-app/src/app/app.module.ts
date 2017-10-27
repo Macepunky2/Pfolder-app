@@ -18,6 +18,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 import { DataService } from './services/data.service';
+import { PhotoListComponent } from './photo-list/photo-list.component';
+import { Photo1Component } from './photo1/photo1.component';
+import { GalleryService } from './services/gallery.service';
 
 
 @NgModule({
@@ -33,6 +36,8 @@ import { DataService } from './services/data.service';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
+    PhotoListComponent,
+    Photo1Component,
     
   ],
   imports: [
@@ -41,7 +46,8 @@ import { DataService } from './services/data.service';
     FormsModule,
     HttpModule
   ],
-  providers: [DataService],
+  providers: [DataService,
+  GalleryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,30 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+h4 {
+    font-size:85%;
+    font-weight: bold;
+    color: #ec1b5a;  
+    
+}
+#artcontainer{
+
+    
+    width:75%;
+    margin-left: 100px; 
+    margin-top: 5em;    
+    
+
+    .card{
+        margin: 1em;
+    
+    }
+   
+}   
+.badge{
+    background-color: #ec1b5a;  
+   
+}
+#nodeco{
+    text-decoration: none;
+}
+
