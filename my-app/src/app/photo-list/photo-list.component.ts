@@ -23,7 +23,7 @@ export class PhotoListComponent implements OnInit {
 
       
     });
-    this.dataService.getUsers().subscribe((users) => {
+    this.dataService.getUsers().subscribe(users => {
       this.users = users; });
   }
 

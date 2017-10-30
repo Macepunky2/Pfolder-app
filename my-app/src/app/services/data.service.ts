@@ -13,7 +13,7 @@ export class DataService {
   }
 
 
-  getUsers() : Observable<User[]> 
+  getUsers() : Observable<User[]>  //gets users from local json
   {
     return this.http.get('/json/users.json')
     .map(res => res.json());

@@ -70,19 +70,13 @@ export class RegisterComponent implements OnInit {
           phone: username
       });
 
-      return false;     
-
-     
+      return false;          
     }
-  }
-
-    
-    
+  }   
   
 
 
   constructor(private dataService:DataService) { 
-
   }
 
   
@@ -91,6 +85,5 @@ export class RegisterComponent implements OnInit {
     this.dataService.getUsers().subscribe((users) => {
       this.users = users;
      });
-  }
-
+      }
 }
